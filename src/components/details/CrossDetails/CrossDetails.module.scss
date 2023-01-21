@@ -1,0 +1,39 @@
+@import '../../../styles/variables';
+
+.cross-details {
+  list-style: none;
+  overflow-y: scroll;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__detail {
+    display: flex;
+    align-items: center;
+  }
+
+  &__indicator {
+    height: 2.4rem;
+    width: 2.4rem;
+
+    margin-right: 1.2rem;
+  }
+
+  &__label {
+    flex: 0 0 12rem;
+    font-size: 1.2rem;
+  }
+
+  &__description {
+    flex: 1;
+    font-size: 1.4rem;
+    // text-transform: uppercase;
+  }
+}

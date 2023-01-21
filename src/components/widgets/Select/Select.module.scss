@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+
+.select {
+  cursor: pointer;
+  position: relative;
+
+  &__select {
+    font-size: 1.4rem;
+
+    // border: 2px solid $color-grey-light-3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 16rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  &__icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    fill: $color-grey-dark-1;
+  }
+}

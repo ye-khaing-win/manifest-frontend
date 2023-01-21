@@ -1,0 +1,55 @@
+@import '../../../styles/variables';
+
+.table {
+  grid-area: table;
+
+  border-right: 1px solid $color-grey-light-3;
+
+  background-color: $color-white;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  &__spinner {
+    position: absolute;
+    top: 2.4rem;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+  }
+
+  &__information {
+    width: 100%;
+
+    position: absolute;
+    top: 1.8rem;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+  }
+
+  &__table {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__rows {
+    overflow-y: overlay;
+    flex: 1 0 0rem;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__pagination {
+    width: 100%;
+  }
+}

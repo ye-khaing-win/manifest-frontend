@@ -1,0 +1,12 @@
+.main {
+  flex: 1;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 58rem;
+  grid-template-rows: max-content 1fr;
+
+  grid-template-areas:
+    'toolbar toolbar'
+    'table details';
+}

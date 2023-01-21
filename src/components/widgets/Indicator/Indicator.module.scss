@@ -1,0 +1,45 @@
+@import '../../../styles/variables';
+
+.indicator {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+
+  background-color: $color-grey-light-1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // BACKGROUND COLOR
+  &--light-green {
+    background-color: $color-primary-light;
+  }
+
+  // ICON COLOR
+  &__icon {
+    height: 74%;
+    width: 74%;
+    fill: $color-grey-dark-1;
+
+    &--white {
+      fill: $color-white;
+    }
+
+    &--light-green {
+      fill: $color-primary-light;
+    }
+
+    &--green {
+      fill: $color-primary;
+    }
+
+    &--yellow {
+      fill: $color-secondary;
+    }
+
+    &--red {
+      fill: $color-tertiary;
+    }
+  }
+}

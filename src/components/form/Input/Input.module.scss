@@ -1,0 +1,122 @@
+@import '../../../styles/variables';
+
+.input {
+  height: 6.2rem;
+  width: 100%;
+
+  position: relative;
+
+  &--textarea {
+    height: 42.2rem;
+  }
+
+  &--span-2 {
+    flex: 2;
+  }
+
+  &__control {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__label {
+    pointer-events: none;
+
+    font-size: 1.2rem;
+    color: $color-grey-dark-1;
+
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  &__indicator {
+    height: 1.6rem;
+    width: 1.6rem;
+
+    position: absolute;
+    top: 6px;
+    left: 1.2rem;
+  }
+
+  &__message {
+    height: 1.4rem;
+
+    padding: 0 0.4rem;
+
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    top: 0.8rem;
+    left: 1.2rem;
+    background-color: $color-grey-light-1;
+
+    transition: all 0.2s ease;
+
+    &.valid {
+      transform: translateX(2.2rem);
+    }
+
+    &.invalid {
+      color: $color-tertiary;
+    }
+  }
+
+  &__text,
+  &__textarea {
+    background-color: transparent;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: $color-grey-dark-1;
+
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid transparent;
+
+    height: 100%;
+    width: 100%;
+    padding: 2.2rem 1.2rem 0 1.2rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:focus {
+      background-color: $color-white;
+      border: 1px solid $color-grey-dark-1;
+    }
+  }
+
+  &__textarea {
+    overflow-y: overlay;
+
+    resize: none;
+    line-height: 1.5;
+    padding-top: 2.8rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__dropdown {
+    cursor: pointer;
+
+    height: 2.8rem;
+    width: 2.8rem;
+
+    position: absolute;
+    top: 50%;
+    right: 0.8rem;
+
+    transform: translate(0, -50%);
+  }
+}

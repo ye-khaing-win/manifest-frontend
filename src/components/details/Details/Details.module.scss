@@ -1,0 +1,105 @@
+@import '../../../styles/variables';
+
+.details {
+  grid-area: details;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  &__spinner {
+    position: absolute;
+    top: 2.4rem;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+  }
+
+  &__information {
+    width: 100%;
+    position: absolute;
+    top: 1.8rem;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+  }
+
+  &__header {
+    position: relative;
+  }
+
+  &__figure {
+    height: 28rem;
+
+    &--default {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(40%);
+
+    &--default {
+      height: 14rem;
+      width: 14rem;
+      filter: brightness(100%);
+    }
+  }
+
+  &__main {
+    color: $color-grey-light-2;
+    letter-spacing: 1px;
+
+    height: 100%;
+    width: 100%;
+    padding: 2.4rem;
+
+    // background-color: rgba($color-white, 0.2);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    margin-bottom: 1.2rem;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    overflow-y: overlay;
+
+    font-size: 1.4rem;
+    max-height: 18.8rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__indicator {
+    height: 3.2rem;
+    width: 3.2rem;
+    margin-right: 1.2rem;
+  }
+
+  &__body {
+    flex: 1 0 0rem;
+    overflow-y: overlay;
+
+    padding: 2.2rem 2rem;
+    position: relative;
+  }
+}

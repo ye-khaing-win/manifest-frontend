@@ -1,0 +1,134 @@
+@import '../../../styles/variables';
+
+.calendar {
+  overflow: hidden;
+
+  height: 36.2rem; // UPDATE LATER
+  // height: max-content;
+  width: max-content; // UPDATE LATER
+  // width: 100%;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-top: 0.8rem;
+
+  background-color: $color-white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  position: absolute;
+  right: 0;
+
+  &__header {
+    padding: 1.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__month {
+    cursor: pointer;
+
+    font-size: 1.4rem;
+
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $color-grey-light-2;
+    }
+  }
+
+  &__year {
+    font-size: 1.4rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  &__action {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+
+  &__content {
+    padding: 1.2rem;
+  }
+
+  &__weekdays {
+    list-style: none;
+
+    height: 3.2rem;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1.2rem;
+  }
+
+  &__weekday {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $color-grey-light-4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__days {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    gap: 0.4rem;
+  }
+
+  &__day {
+    cursor: pointer;
+
+    font-size: 1.2rem;
+
+    height: 3.4rem;
+    width: 3.4rem;
+    padding: 0.4rem;
+    border-radius: 50%;
+    border: 2px solid transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.2s;
+
+    &--active {
+      border: 2px solid $color-primary;
+    }
+
+    &:hover {
+      background-color: $color-grey-light-2;
+    }
+  }
+
+  &__months {
+    list-style: none;
+
+    height: 100%;
+    width: 100%;
+    padding: 2.4rem;
+
+    background-color: $color-white;
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    gap: 1.2rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

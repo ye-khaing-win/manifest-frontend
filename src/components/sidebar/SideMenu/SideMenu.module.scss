@@ -1,0 +1,15 @@
+@import '../../../styles/variables';
+
+.menu {
+  flex: 0 0 28rem;
+  overflow: hidden;
+
+  background-color: $color-primary;
+
+  &__items {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+  }
+}

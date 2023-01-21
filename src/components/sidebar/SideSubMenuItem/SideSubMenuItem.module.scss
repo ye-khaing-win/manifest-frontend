@@ -1,0 +1,39 @@
+@import '../../../styles/variables';
+
+.submenu {
+  &__item {
+    cursor: pointer;
+  }
+
+  &__link {
+    font-size: 1.2rem;
+    color: $color-white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    padding: 1.6rem;
+    padding-left: 6.4rem;
+
+    background-image: linear-gradient(
+      to right,
+      rgba($color-white, 0.85) 50%,
+      transparent 50%
+    );
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: 100%;
+
+    display: flex;
+    align-items: center;
+
+    transition: background-position 0.4s, transform 0.4s;
+
+    &:hover,
+    &--active {
+      background-position: 0%;
+      color: $color-primary;
+      transform: translateX(0.4rem);
+    }
+  }
+}

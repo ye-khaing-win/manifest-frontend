@@ -1,0 +1,41 @@
+@import './styles/variables';
+@import './styles/mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+s *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 56.25%;
+
+  @include respond(largest) {
+    font-size: 50%;
+  }
+
+  @include respond(large) {
+    font-size: 50%;
+  }
+
+  @include respond(medium) {
+    font-size: 45%;
+  }
+
+  @include respond(small) {
+    font-size: 40%;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $color-grey-dark-2;
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "type": "GP",
+    "isoNo": "00"
+  },
+  {
+    "type": "RT",
+    "isoNo": "30"
+  },
+  {
+    "type": "UT",
+    "isoNo": "50"
+  },
+  {
+    "type": "PF",
+    "isoNo": "60"
+  },
+  {
+    "type": "PL",
+    "isoNo": "60"
+  },
+  {
+    "type": "TN",
+    "isoNo": "70"
+  },
+  {
+    "type": "TD",
+    "isoNo": "70"
+  },
+  {
+    "type": "TG",
+    "isoNo": "70"
+  }
+]

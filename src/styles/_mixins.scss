@@ -1,0 +1,47 @@
+/* 
+BREAKPOINT ARGUMENTS CHOICES
+
+
+1) smallest (smaller than or equal 400)
+2) small (smaller than or equal 600px)
+3) medium (smaller than or equal 1000px)
+4) large (small than or equal 1200px)
+5) largest (small than or equal 1400px)
+6) default (desktop screen)
+7) huge (greater than or equal 1800px)
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+  // 1) SMALLER THAN OR EQUAL 400px
+  @if $breakpoint == smallest {
+    @media screen and (max-width: 25em) {
+      @content;
+    }
+  }
+  // 2) SMALLER THAN OR EQUAL 600px
+  @if $breakpoint == small {
+    @media screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  // 3) SMALLER THAN OR EQUAL 1000px
+  @if $breakpoint == medium {
+    @media screen and (max-width: 62.5em) {
+      @content;
+    }
+  }
+  // 4) SMALLER THAN OR EQUAL 1200px
+  @if $breakpoint == large {
+    @media screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  // 5) SMALLER THAN OR EQUAL 1400px
+  @if $breakpoint == largest {
+    @media screen and (max-width: 87.5em) {
+      @content;
+    }
+  }
+}

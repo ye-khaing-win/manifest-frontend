@@ -1,0 +1,21 @@
+@import '../../../styles/variables';
+
+.item {
+  font-size: 1.2rem;
+
+  flex: 0 0 18rem;
+  border-radius: 100px;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  &:last-child {
+    flex: 1;
+  }
+
+  &__indicator {
+    height: 2.6rem;
+    width: 2.6rem;
+  }
+}

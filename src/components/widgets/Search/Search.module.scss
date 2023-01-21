@@ -1,0 +1,39 @@
+@import '../../../styles/variables';
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+
+    width: 100%;
+    padding: 1.2rem 2.4rem;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    margin-right: -3.5rem;
+
+    background-color: $color-grey-light-2;
+
+    transition: width 0.1s;
+
+    &::-webkit-input-placeholder {
+      font-weight: 300;
+      color: $color-grey-light-4;
+    }
+
+    &:focus {
+      background-color: $color-grey-light-3;
+    }
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: $color-grey-dark-1;
+  }
+}

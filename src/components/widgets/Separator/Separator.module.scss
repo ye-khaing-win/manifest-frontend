@@ -1,0 +1,15 @@
+@import '../../../styles/variables';
+
+.separator {
+  background-color: $color-grey-light-3;
+
+  &--cross {
+    width: 1px;
+    height: 90%;
+  }
+
+  &--main {
+    width: 96%;
+    height: 1px;
+  }
+}

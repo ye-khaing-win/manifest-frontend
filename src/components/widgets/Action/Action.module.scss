@@ -1,0 +1,55 @@
+@import '../../../styles/variables';
+
+.action {
+  cursor: pointer;
+
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+
+  background-color: $color-grey-light-1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.1s;
+
+  &--close {
+    background-color: transparent;
+
+    & > .action__icon {
+      fill: $color-grey-dark-1;
+    }
+  }
+
+  &:not(&--close):hover {
+    background-color: $color-grey-light-2;
+  }
+
+  &:hover > .action__icon--yellow {
+    fill: $color-secondary;
+  }
+
+  &:hover > .action__icon--red {
+    fill: $color-tertiary;
+  }
+
+  &[disabled] > &__icon {
+    fill: $color-grey-dark-1;
+  }
+
+  &__icon {
+    height: 68%;
+    width: 68%;
+    fill: $color-primary;
+
+    transition: fill 0.1s;
+
+    &--grey {
+      fill: $color-grey-dark-1;
+    }
+  }
+}

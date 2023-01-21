@@ -1,0 +1,55 @@
+@import '../../../styles/variables';
+
+.column {
+  flex: 1;
+  padding: 1.2rem 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    border-right: 1px solid $color-grey-light-3;
+  }
+
+  &__heading {
+    font-size: 1.4rem;
+    font-weight: 400;
+    @import '../../../styles/variables';
+
+    .column {
+      flex: 1;
+      padding: 1.2rem 2.4rem;
+
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child) {
+        border-right: 1px solid $color-grey-light-3;
+      }
+
+      &__heading {
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        margin-bottom: 1.8rem;
+      }
+
+      &__items {
+        list-style: none;
+
+        display: flex;
+      }
+    }
+
+    text-transform: uppercase;
+
+    margin-bottom: 1.7rem;
+  }
+
+  &__items {
+    list-style: none;
+
+    display: flex;
+  }
+}

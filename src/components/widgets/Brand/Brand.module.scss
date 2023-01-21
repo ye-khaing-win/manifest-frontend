@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+
+.brand {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}

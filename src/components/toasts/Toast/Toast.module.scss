@@ -1,0 +1,91 @@
+@import '../../../styles/variables';
+
+.toast {
+  cursor: pointer;
+
+  width: 42rem;
+  border-radius: 4px;
+
+  background-color: $color-white;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
+
+  animation: slide-left 0.8s forwards;
+
+  position: relative;
+
+  &--hidden {
+    animation: slide-right 0.8s forwards;
+  }
+
+  &__close {
+    height: 2.8rem;
+    width: 2.8rem;
+
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+  }
+
+  &__main {
+    padding: 1.8rem 1.2rem;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__indicator {
+    height: 4.8rem;
+    width: 4.8rem;
+
+    margin-right: 0.8rem;
+  }
+
+  &__heading {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+  }
+
+  &__message {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+
+  &__bar {
+    width: 100%;
+    height: 2px;
+    background-color: $color-tertiary;
+
+    &--green {
+      background-color: $color-primary;
+    }
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(110%);
+  }
+  80% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    transform: translate(110%);
+  }
+}
