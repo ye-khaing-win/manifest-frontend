@@ -7,7 +7,7 @@ import types from '../../data/types.json';
 
 const parseBl = (ws) => {
   // 1) PARSE SHEET TO JSON
-  const json = ws.map((ws) => xlsx.utils.sheet_to_json(ws, { range: 6 }));
+  const json = ws.map((ws) => xlsx.utils.sheet_to_json(ws, { range: 4 }));
 
   // 2) REMOVE WHITE SPACES FROM SHEET OBJECT
   const data = json.map((ws) =>
@@ -21,10 +21,12 @@ const parseBl = (ws) => {
     })
   );
 
+  console.log(data);
+
   // 3) CONSTRUCT CONTAINER BASED MANIFEST FROM SHEET
-  const vessel = ws[0]['F6'].v.slice(0, -4);
-  const voyage = ws[0]['J6'].v;
-  const eta = ws[0]['M6'].v;
+  const vessel = ws[0]['F4'].v.slice(0, -4);
+  const voyage = ws[0]['J4'].v;
+  const eta = ws[0]['M4'].v;
 
   const manifests = data.reduce((acc, cur) => {
     const containerNos_ = cur[1]['b/lno./containerno.'];
