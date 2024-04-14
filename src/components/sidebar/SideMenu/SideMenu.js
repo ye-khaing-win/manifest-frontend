@@ -5,7 +5,6 @@ import menuItems from '../sidebar.json';
 import classes from './SideMenu.module.scss';
 
 const SideMenu = () => {
-  console.log('Calling SideMenu');
   return (
     <nav className={classes.menu}>
       <ul className={classes.menu__items}>

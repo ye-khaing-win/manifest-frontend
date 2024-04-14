@@ -116,8 +116,8 @@ export const map = (files) => async (dispatch) => {
     };
     reader.readAsArrayBuffer(files[0]);
   } catch (error) {
-    console.log(error);
     const err = catchError(error);
+    console.error(error);
     dispatch(toastActions.add(err));
     dispatch(manifestActions.mapFailure());
   }

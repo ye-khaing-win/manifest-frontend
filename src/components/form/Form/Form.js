@@ -65,7 +65,6 @@ const Form = ({ currentItem, formGroups, actions, onHideForm }) => {
       dispatch(actions.createOne(newItem));
       reset();
     } else {
-      console.log(updatedItem);
       dispatch(actions.updateOne(currentItem._id, updatedItem));
       onHideForm();
     }

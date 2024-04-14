@@ -44,7 +44,6 @@ export const extractOnlyNumbers = (str) => {
 };
 
 export const extractDecimalNumber = (str = '') => {
-  console.log(str);
   return String(str).match(/\d+\.*\d*/)[0];
 };
 

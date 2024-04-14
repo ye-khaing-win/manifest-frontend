@@ -16,7 +16,6 @@ const File = ({ onUpload, onClose, isMultiple = true }) => {
   };
 
   const handleRemoveFile = (fileName) => {
-    console.log(fileName);
     const filteredFiles = files.filter((file) => file.name !== fileName);
     setFiles(filteredFiles);
   };

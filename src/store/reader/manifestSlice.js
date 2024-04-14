@@ -49,7 +49,7 @@ const parseBl = (ws) => {
     const containerTypes = containerTypes_
       ? containerTypes_
           .split('\n')
-          .map((containerType) => containerType.trim())
+          .map((containerType) => containerType?.trim())
           .filter((type) => type !== '')
           .map((type) => {
             let sz = helpers.extractOnlyNumbers(type) || '';
@@ -102,7 +102,9 @@ const parseBl = (ws) => {
 
     const volumePerTeu = Number(volumeTotal) / teusTotal;
 
-    const hasHsCode = helpers.hasHsCode(descOfGoods_);
+    console.log(descOfGoods_);
+
+    const hasHsCode = descOfGoods_ ? helpers.hasHsCode(descOfGoods_) : false;
     let hsCode = hasHsCode
       ? helpers
           .extractOnlyNumbers(
@@ -154,7 +156,7 @@ const parseBl = (ws) => {
           pol: pol_,
           hasHsCode,
           hsCode,
-          descOfGoods: descOfGoods_,
+          descOfGoods: descOfGoods_ || '',
           commodity: null,
           commDesc: null,
           commDetails: null,
@@ -236,9 +238,9 @@ const manifestSlice = createSlice({
         if (!commodity) {
           commodity = codes.find((code) => {
             return code.keywords.find((keyword) => {
-              return item.descOfGoods
+              return item?.descOfGoods
                 .toLowerCase()
-                .includes(keyword.trim().toLowerCase());
+                .includes(keyword?.trim().toLowerCase());
             });
           });
         }

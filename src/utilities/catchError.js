@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
 const catchError = (error) => {
+  console.log(error);
   if (error.response && error.response.data) {
     const res = error.response.data;
     return {

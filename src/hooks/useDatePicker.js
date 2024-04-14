@@ -17,7 +17,6 @@ const useDatePicker = (label, initialDate, initialValue = '') => {
   const handleChange = (e) => {
     setIsTouched(true);
     setValue(e.target.value);
-    console.log(value);
   };
 
   const handleClick = () => {

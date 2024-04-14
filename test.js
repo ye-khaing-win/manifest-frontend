@@ -17,5 +17,3 @@ const commodity = codes.find((code) => {
     descOfGoods.toLowerCase().includes(keyword.trim().toLowerCase())
   );
 });
-
-console.log(commodity.name);
